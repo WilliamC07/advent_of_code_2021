@@ -16,7 +16,7 @@ pub fn run() {
     let lines = io::BufReader::new(file).lines();
     let mut depths: Vec<u32> = Vec::new();
 
-    for (index, line) in lines.enumerate() {
+    for line in lines {
         if let Ok(depth) = line {
             let depth = depth.parse::<u32>().unwrap();
             depths.push(depth);
